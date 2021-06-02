@@ -12,6 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        app:layout_constrainedHeight="true"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -20,39 +21,35 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/ic_launcher_background"
+            app:imageUrl="@{viewModel.articleImageURL}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/app_name" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="@string/app_name"
             android:text="@{viewModel.newsTitle}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
             tools:text="News title" />
 
         <TextView
             android:id="@+id/textViewContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp"
             android:ellipsize="end"
-            android:hint="@string/content_content"
             android:singleLine="true"
             android:text="@{viewModel.newsContent}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:text="@string/content_content" />
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
