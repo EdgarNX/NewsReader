@@ -1,6 +1,6 @@
 package com.nemethedgar.newsreader.model.mapper;
 
-import com.nemethedgar.data.news.model.Article;
+import com.nemethedgar.data.features.news.model.Article;
 import com.nemethedgar.newsreader.model.ArticleItemViewModel;
 
 import java.util.ArrayList;

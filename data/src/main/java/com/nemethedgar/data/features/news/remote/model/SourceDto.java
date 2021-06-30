@@ -1,4 +1,4 @@
-package com.nemethedgar.data.news.remote.model;
+package com.nemethedgar.data.features.news.remote.model;
 
 public class SourceDto {
     public final String name;

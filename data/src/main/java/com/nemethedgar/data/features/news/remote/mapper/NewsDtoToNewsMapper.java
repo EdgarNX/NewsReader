@@ -1,8 +1,8 @@
-package com.nemethedgar.data.news.remote.mapper;
+package com.nemethedgar.data.features.news.remote.mapper;
 
-import com.nemethedgar.data.news.model.Article;
-import com.nemethedgar.data.news.remote.model.ArticleDto;
-import com.nemethedgar.data.news.remote.model.ArticleListDto;
+import com.nemethedgar.data.features.news.model.Article;
+import com.nemethedgar.data.features.news.remote.model.ArticleDto;
+import com.nemethedgar.data.features.news.remote.model.ArticleListDto;
 
 import java.util.ArrayList;
 import java.util.List;

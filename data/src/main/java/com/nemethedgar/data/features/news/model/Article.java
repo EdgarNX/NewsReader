@@ -1,4 +1,4 @@
-package com.nemethedgar.data.news.model;
+package com.nemethedgar.data.features.news.model;
 
 import io.reactivex.annotations.NonNull;
 

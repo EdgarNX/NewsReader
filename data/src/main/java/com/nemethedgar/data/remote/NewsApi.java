@@ -1,11 +1,14 @@
 package com.nemethedgar.data.remote;
 
-import com.nemethedgar.data.news.remote.model.ArticleListDto;
+import androidx.room.Dao;
+
+import com.nemethedgar.data.features.news.remote.model.ArticleListDto;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+@Dao
 public interface NewsApi {
 
     @GET("/v2/top-headlines")
