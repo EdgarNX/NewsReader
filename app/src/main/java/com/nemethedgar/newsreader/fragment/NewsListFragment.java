@@ -32,7 +32,6 @@ public class NewsListFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //mViewModel = new ViewModelProvider(this).get(NewsReaderViewModel.class);
 
         alertNavigator = new AlertNavigator(getChildFragmentManager(), requireContext());
 
