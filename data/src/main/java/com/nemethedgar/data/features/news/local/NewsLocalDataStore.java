@@ -12,17 +12,17 @@ import io.reactivex.schedulers.Schedulers;
 
 public class NewsLocalDataStore {
 
-    private static NewsDao dao;
+    private final NewsDao dao;
 
     public NewsLocalDataStore(NewsDao dao) {
         this.dao = dao;
     }
 
-    public static Single<List<Article>> getNewsReaderList() {
+    public Single<List<Article>> getNewsReaderList() {
         return dao.queryArticles().map(new NewsEntityToArticle());
     }
 
-    public static void saveArticles(List<Article> articles) throws Exception {
+    public void saveArticles(List<Article> articles) throws Exception {
         Single.just(articles).map(new NewsArticlesToEntity())
                 .flatMapCompletable((newsReaderEntities -> dao.insertArticles(newsReaderEntities)))
                 .subscribeOn(Schedulers.io())

@@ -30,8 +30,8 @@ public class NewsRepositoryImpl implements NewsRepository {
     @NonNull
     public Single<List<Article>> getNewsArticles() {
         return remoteSource.getNewsArticles()
-                .doOnSuccess(NewsLocalDataStore::saveArticles)
-                .onErrorResumeNext(NewsLocalDataStore.getNewsReaderList());
+                .doOnSuccess(localDataStore::saveArticles)
+                .onErrorResumeNext(localDataStore.getNewsReaderList());
     }
 
     @androidx.annotation.NonNull

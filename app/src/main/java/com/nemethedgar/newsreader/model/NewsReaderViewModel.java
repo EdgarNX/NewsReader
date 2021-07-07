@@ -58,8 +58,6 @@ public class NewsReaderViewModel extends AndroidViewModel implements LifecycleOb
 
     private void onNewsArticlesReceived(@NonNull List<ArticleItemViewModel> articles) {
         this.items.addAll(articles);
-//        isLoading.set(false);
-//        resultText.set(getApplication().getString(R.string.results, articles.size()));
     }
 
     private void onNewsArticlesError(Throwable throwable) {

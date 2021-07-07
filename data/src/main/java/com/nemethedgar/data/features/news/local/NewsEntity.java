@@ -11,13 +11,13 @@ public class NewsEntity {
     @Nullable
     public Integer id;
 
-    public String imageUrl;
+    public final String imageUrl;
 
-    public String title;
+    public final String title;
 
-    public String content;
+    public final String content;
 
-    public String description;
+    public final String description;
 
     public NewsEntity(String imageUrl, String title, String content, String description) {
         this.imageUrl = imageUrl;
